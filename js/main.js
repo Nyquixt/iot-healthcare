@@ -3,6 +3,7 @@
 
 	$('#main').hide();
 	$('#passwdfield').focus();
+	$('#stop').hide();
 	//form submit to check for valid password
 	$('#passwd').submit((e) => {
 		e.preventDefault();
@@ -14,6 +15,8 @@
 	var requestInterval;
 	//handle start button
 	$('#start').click(() => {
+		$('#start').hide();
+		$('#stop').show();
 		requestInterval = setInterval(() => {
 			$.get('https://55yc79y6i0.execute-api.us-east-1.amazonaws.com/Test/vitals', data => {
 				console.log(data);
@@ -29,6 +32,7 @@
 	});
 	//handle stop button
 	$('#stop').click(() => {
+		$('#start').show();
 		clearInterval(requestInterval);
 	});
 	//handle clear button
