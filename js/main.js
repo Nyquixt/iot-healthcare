@@ -33,6 +33,7 @@
 	//handle stop button
 	$('#stop').click(() => {
 		$('#start').show();
+		$('#stop').hide();
 		clearInterval(requestInterval);
 	});
 	//handle clear button
