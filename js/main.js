@@ -1,6 +1,4 @@
-(function ($) {
-	"use strict";
-
+$(function () {
 	$('#main').hide();
 	$('#passwdfield').focus();
 	$('#stop').hide();
@@ -21,12 +19,12 @@
 			$.get('https://55yc79y6i0.execute-api.us-east-1.amazonaws.com/Test/vitals', data => {
 				console.log(data);
 				$('#infoTable tbody').append('<tr class="row100 body">' +
-				'<td class="cell100 column1">' + data.date + '</td>' + 
-				'<td class="cell100 column2">' + data.time + '</td>' + 
-				'<td class="cell100 column3">' + data.BP + '</td>' + 
-				'<td class="cell100 column4">' + data.Pulse + '</td>' + 
-				'<td class="cell100 column5">' + data.OSat + '</td>' +
-				'</tr>');
+					'<td class="cell100 column1">' + data.date + '</td>' +
+					'<td class="cell100 column2">' + data.time + '</td>' +
+					'<td class="cell100 column3">' + data.BP + '</td>' +
+					'<td class="cell100 column4">' + data.Pulse + '</td>' +
+					'<td class="cell100 column5">' + data.OSat + '</td>' +
+					'</tr>');
 			});
 		}, 5000);
 	});
@@ -60,7 +58,4 @@
 		$(table2).find("." + column).removeClass('hov-column-' + verTable);
 		$(table1).find(".row100.head ." + column).removeClass('hov-column-head-' + verTable);
 	});
-
-
-
-})(jQuery);
+});
