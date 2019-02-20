@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!--===============================================================================================-->
+    <link rel="icon" type="image/png" href="images/icons/computer.png" />
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="vendor/animate/animate.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="vendor/select2/select2.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="vendor/perfect-scrollbar/perfect-scrollbar.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="css/util.css">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <!--===============================================================================================-->
+    <title>IoT Test Client</title>
+</head>
+
+<body>
+    <div id="top">
+        <form id="passwd">
+            <input type="password" id="passwdfield">
+            <input type="submit" value="">
+        </form>
+    </div>
+    <div id="main">
+        <!-- <ul></ul> -->
+        <div class="limiter">
+            <div class="container-table100">
+                <div class="wrap-table100">
+                    <div id="btn-group">
+                        <button id="start"><i class="fa fa-play" aria-hidden="true"></i></button>
+                        <button id="stop"><i class="fa fa-pause" aria-hidden="true"></i></button>
+                        <button id="clear"><i class="fa fa-trash" aria-hidden="true"></i></button>
+                    </div>
+                    <div class="table100 ver3 m-b-110">
+                        <div class="table100-head">
+                            <table>
+                                <thead>
+                                    <tr class="row100 head">
+                                        <th class="cell100 column1">Date</th>
+                                        <th class="cell100 column2">Time</th>
+                                        <th class="cell100 column3">BP (mmHg)</th>
+                                        <th class="cell100 column4">Pulse (b/m)</th>
+                                        <th class="cell100 column5">OSat (%)</th>
+                                    </tr>
+                                </thead>
+                            </table>
+                        </div>
+
+                        <div class="table100-body js-pscroll">
+                            <table id="infoTable">
+                                <tbody>
+                                    <!-- <tr class="row100 body">
+                                        <td class="cell100 column1">Like a butterfly</td>
+                                        <td class="cell100 column2">Boxing</td>
+                                        <td class="cell100 column3">9:00 AM - 11:00 AM</td>
+                                        <td class="cell100 column4">Aaron Chapman</td>
+                                        <td class="cell100 column5">10</td>
+                                    </tr> -->
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
