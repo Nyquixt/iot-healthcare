@@ -1,15 +1,15 @@
 $(function () {
-	$('#main').hide();
-	$('#passwdfield').focus();
+	// $('#main').hide();
+	// $('#passwdfield').focus();
 	$('#stop').hide();
 	//form submit to check for valid password
-	$('#passwd').submit((e) => {
-		e.preventDefault();
-		if ($('#passwdfield').val() == 'awsiot') {
-			$('#top').hide();
-			$('#main').show();
-		}
-	});
+	// $('#passwd').submit((e) => {
+	// 	e.preventDefault();
+	// 	if ($('#passwdfield').val() == 'awsiot') {
+	// 		$('#top').hide();
+	// 		$('#main').show();
+	// 	}
+	// });
 	var requestInterval;
 	//handle start button
 	$('#start').click(() => {
