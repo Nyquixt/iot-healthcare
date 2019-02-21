@@ -1,6 +1,6 @@
 (function ($) {
     "use strict";
-
+    $('#home').hide();
     /*==================================================================
     [ Focus Contact2 ]*/
     $('.input100').each(function () {
@@ -67,11 +67,33 @@
 
     $('.contact100-btn-hide').on('click', function () {
         $('.wrap-contact100').fadeOut(400);
+        $('#home').hide();
     })
 
     $('.contact100-btn-show').on('click', function () {
-        console.log('clicked');
         $('.wrap-contact100').fadeIn(400);
+        $('#home').show();
     })
+
+    //post message and info to AWS for processing
+    $('#submit').click(e => {
+        e.preventDefault();
+        $.ajax({
+            url: 'https://55yc79y6i0.execute-api.us-east-1.amazonaws.com/Test/contact',
+            method: 'POST',
+            statusCode: 200,
+            data: JSON.stringify({
+                name: $('#name').val(),
+                email: $('#email').val(),
+                message: $('#message').val()
+            }), //you have to stringify this!!!
+            success: function(data){
+                $('#name').val('');
+                $('#email').val('');
+                $('#message').val('');
+                $('#more').text('Thank you ' + data.name + ' for being interested in our project!')
+            }
+        });
+    });
 
 })(jQuery);
