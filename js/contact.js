@@ -82,12 +82,15 @@
             url: 'https://55yc79y6i0.execute-api.us-east-1.amazonaws.com/Test/contact',
             method: 'POST',
             statusCode: 200,
+            crossDomain: true,
+            dataType: 'json',
+            contentType: 'application/json',
             data: JSON.stringify({
                 name: $('#name').val(),
                 email: $('#email').val(),
                 message: $('#message').val()
             }), //you have to stringify this!!!
-            success: function(data){
+            success: function (data) {
                 $('#name').val('');
                 $('#email').val('');
                 $('#message').val('');
