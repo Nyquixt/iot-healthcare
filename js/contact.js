@@ -1,5 +1,7 @@
 (function ($) {
     "use strict";
+    var check;
+
     $('#home').hide();
     /*==================================================================
     [ Focus Contact2 ]*/
@@ -17,8 +19,8 @@
     [ Validate ]*/
     var input = $('.validate-input .input100');
 
-    $('.validate-form').on('submit', function () {
-        var check = true;
+    $('#submit').on('click', function () {
+        check = true;
 
         for (var i = 0; i < input.length; i++) {
             if (validate(input[i]) == false) {
@@ -78,25 +80,27 @@
     //post message and info to AWS for processing
     $('#submit').click(e => {
         e.preventDefault();
-        $.ajax({
-            url: 'https://55yc79y6i0.execute-api.us-east-1.amazonaws.com/Test/contact',
-            method: 'POST',
-            statusCode: 200,
-            crossDomain: true,
-            dataType: 'json',
-            contentType: 'application/json',
-            data: JSON.stringify({
-                name: $('#name').val(),
-                email: $('#email').val(),
-                message: $('#message').val()
-            }), //you have to stringify this!!!
-            success: function (data) {
-                $('#name').val('');
-                $('#email').val('');
-                $('#message').val('');
-                $('#more').text('Thank you ' + data.name + ' for being interested in our project!')
-            }
-        });
+        if (check) { //if validation is passed
+            $.ajax({
+                url: 'https://55yc79y6i0.execute-api.us-east-1.amazonaws.com/Test/contact',
+                method: 'POST',
+                statusCode: 200,
+                crossDomain: true,
+                dataType: 'json',
+                contentType: 'application/json',
+                data: JSON.stringify({
+                    name: $('#name').val(),
+                    email: $('#email').val(),
+                    message: $('#message').val()
+                }), //you have to stringify this!!!
+                success: function (data) {
+                    $('#name').val('');
+                    $('#email').val('');
+                    $('#message').val('');
+                    $('#more').text('Thank you ' + data.name + ' for being interested in our project!')
+                }
+            });
+        }
     });
 
 })(jQuery);
