@@ -8,7 +8,7 @@
 
         //ajax request
         $.ajax({
-            url: '',
+            url: 'https://55yc79y6i0.execute-api.us-east-1.amazonaws.com/Test/iot-btn',
             method: 'POST',
             statusCode: 200,
             crossDomain: true,
@@ -22,7 +22,7 @@
             success: function (data) {
                 //log out the message 'a notification has been sent to phone
                 //number ...' to the 'screen'
-
+                console.log(data);
                 //clear input
                 $('#serialNum').val('');
                 $('#clickType').val('');
