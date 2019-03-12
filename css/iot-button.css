@@ -1,3 +1,22 @@
 .main {
     margin-top: 5%;
 }
+h1 {
+    margin: 0px;
+    padding-bottom: 2%;
+    color: rgb(73, 36, 105);
+    font-weight: bold;
+    font-family: Lato-Regular;
+    src: url('../fonts/Lato/Lato-Regular.ttf');
+}
+button {
+    src: url('../images/aws-iot-btn.png');
+    background-color: white;
+    border-color: white;
+    box-shadow: white;
+    -moz-window-shadow: white;
+    border: white;
+}
+col-sm-10 {
+    padding-left: 10%;
+}
