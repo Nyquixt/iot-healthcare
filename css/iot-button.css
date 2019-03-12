@@ -1,9 +1,13 @@
 .main {
     margin-top: 5%;
 }
+nav {
+    background-color: rgb(72, 36, 104);
+}
 h1 {
     margin: 0px;
     padding-bottom: 2%;
+    padding-top: 2%;
     color: rgb(73, 36, 105);
     font-weight: bold;
     font-family: Lato-Regular;
