@@ -45,7 +45,11 @@ a:hover {
 }
 
 /* ------------------------------------ */
-h1,h2,h3,h4,h5,h6 {margin: 0px;}
+h1{margin: 0px;
+color: rgb(73, 36, 105);
+font-weight: bold;}
+
+h2,h3,h4,h5,h6 {margin: 0px;}
 
 p {margin: 0px;}
 
@@ -104,7 +108,7 @@ iframe {
   content: "";
   display: block;
   position: absolute;
-  background-color: #ebebeb;
+  background-color: #ffffff;
   border-radius: 5px;
   width: 100%;
   height: calc(100% - 30px);
@@ -123,7 +127,7 @@ iframe {
   content: "";
   display: block;
   position: absolute;
-  background-color: #cccccc;
+  background-color: #ffffff;
   border-radius: 5px;
   width: 100%;
   height: calc(100% - 30px);
@@ -143,7 +147,7 @@ iframe {
 .container-table100 {
   width: 100%;
   min-height: 100vh;
-  background: #fff;
+  background: #ffffff;
 
   display: -webkit-box;
   display: -webkit-flex;
@@ -163,7 +167,7 @@ iframe {
 /*//////////////////////////////////////////////////////////////////
 [ Table ]*/
 .table100 {
-  background-color: #fff;
+  background-color: #ffffff;
 }
 
 table {
@@ -176,7 +180,7 @@ th, td {
 }
 
 .column1 {
-  width: 33%;
+  width: 25%;
   padding-left: 40px;
 }
 
@@ -185,11 +189,11 @@ th, td {
 }
 
 .column3 {
-  width: 22%;
+  width: 12%;
 }
 
 .column4 {
-  width: 19%;
+  width: 12%;
 }
 
 .column5 {
@@ -235,7 +239,7 @@ th, td {
   color: #fff;
   line-height: 1.4;
 
-  background-color: #6c7ae0;
+  background-color: rgb(73, 36, 105);
 }
 
 .table100.ver1 td {
@@ -266,11 +270,11 @@ th, td {
 }
 
 .table100.ver1 .ps__rail-y::before {
-  background-color: #ebebeb;
+  background-color: #ffffff;
 }
 
 .table100.ver1 .ps__rail-y .ps__thumb-y::before {
-  background-color: #cccccc;
+  background-color: #ffffff;
 }
 
 
@@ -322,7 +326,7 @@ th, td {
 }
 
 .table100.ver2 .ps__rail-y::before {
-  background-color: #ebebeb;
+  background-color: #ffffff;
 }
 
 .table100.ver2 .ps__rail-y .ps__thumb-y::before {
@@ -429,7 +433,7 @@ th, td {
 }
 
 .table100.ver4 .ps__rail-y::before {
-  background-color: #ebebeb;
+  background-color: #ffffff;
 }
 
 .table100.ver4 .ps__rail-y .ps__thumb-y::before {
@@ -494,7 +498,7 @@ th, td {
 }
 
 .table100.ver5 tr:hover td {
-  background-color: #ebebeb;
+  background-color: #ffffff;
   cursor: pointer;
 }
 
@@ -518,9 +522,9 @@ th, td {
 }
 
 .table100.ver5 .ps__rail-y::before {
-  background-color: #ebebeb;
+  background-color: #ffffff;
 }
 
 .table100.ver5 .ps__rail-y .ps__thumb-y::before {
-  background-color: #cccccc;
+  background-color: #ffffff;
 }
