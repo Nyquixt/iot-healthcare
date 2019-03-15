@@ -1,15 +1,5 @@
 $(function () {
-	// $('#main').hide();
-	// $('#passwdfield').focus();
 	$('#stop').hide();
-	//form submit to check for valid password
-	// $('#passwd').submit((e) => {
-	// 	e.preventDefault();
-	// 	if ($('#passwdfield').val() == 'awsiot') {
-	// 		$('#top').hide();
-	// 		$('#main').show();
-	// 	}
-	// });
 	var requestInterval;
 	//handle start button
 	$('#start').click(() => {
@@ -17,13 +7,18 @@ $(function () {
 		$('#stop').show();
 		requestInterval = setInterval(() => {
 			$.get('https://55yc79y6i0.execute-api.us-east-1.amazonaws.com/Test/vitals', data => {
+				console.log(typeof data.body);
+				info = JSON.parse(data.body);
 				console.log(data);
 				$('#infoTable tbody').append('<tr class="row100 body">' +
-					'<td class="cell100 column1">' + data.date + '</td>' +
-					'<td class="cell100 column2">' + data.time + '</td>' +
-					'<td class="cell100 column3">' + data.BP + '</td>' +
-					'<td class="cell100 column4">' + data.Pulse + '</td>' +
-					'<td class="cell100 column5">' + data.OSat + '</td>' +
+					'<td class="cell100 column1">' + info.date + '</td>' +
+					'<td class="cell100 column2">' + info.time + '</td>' +
+					'<td class="cell100 column3">' + info.HR + '</td>' +
+					'<td class="cell100 column4">' + info.BP.values[0]+ "," + info.BP.values[1] + '</td>' +
+					'<td class="cell100 column5">' + info.Pulse + '</td>' +
+					'<td class="cell100 column6">' + info.OSat + '</td>' +
+					'<td class="cell100 column7">' + info.Temp + '</td>' +
+					'<td class="cell100 column8">' + info.Resp + '</td>' +
 					'</tr>');
 			});
 		}, 5000);
