@@ -25,10 +25,10 @@
 </head>
 
 <body>
-     <!-- Navigation -->
-<nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top" style="opacity: 1;">
         <div class="container">
-            <a class="navbar-brand" href="index.html">AWS for Healthcare</a>
+            <a class="navbar-brand" href="../index.html">AWS for Healthcare</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
                 aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -40,10 +40,13 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">About</a>
+                        <a class="nav-link" href="about.html">About</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="views/contact.html">Contact</a>
+                        <a class="nav-link active" href="team.html">Team</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
                     </li>
                 </ul>
             </div>
@@ -51,13 +54,16 @@
     </nav>
 
     <div id="main">
-        
         <!-- <ul></ul> -->
         <div class="limiter">
-            
+
             <div class="container-table100">
                 <div class="wrap-table100">
-                    <div style="padding-top: 10%;"><h1><center> Virtual Vitals Panel </center></h1></div>
+                    <div style="padding-top: 10%;">
+                        <h1>
+                            <center> Virtual Vitals Panel </center>
+                        </h1>
+                    </div>
                     <div id="btn-group">
                         <button id="start"><i class="fa fa-play" aria-hidden="true"></i></button>
                         <button id="stop"><i class="fa fa-pause" aria-hidden="true"></i></button>
@@ -98,6 +104,15 @@
                 </div>
             </div>
         </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="py-5">
+        <div class="container">
+            <p class="m-0 text-center text-white">AWS4Healthcare</p>
+        </div>
+        <!-- /.container -->
+    </footer>
     <script src="../vendor/jquery/jquery.min.js"></script>
     <script src="../js/vitals.js"></script>
 </body>
