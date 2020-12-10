@@ -7,19 +7,16 @@ $(function () {
 		$('#stop').show();
 
 		requestInterval = setInterval(() => {
-			$.get('https://px358l2cdd.execute-api.us-east-2.amazonaws.com/Test', data => {
-				console.log(typeof data.body);
-				info = JSON.parse(data.body);
-				console.log(data);
+			$.get('https://4tjqstr2vc.execute-api.us-east-2.amazonaws.com/test/vitalFunction', data => {
 				$('#infoTable tbody').append('<tr class="row100 body">' +
-					'<td class="cell100 column1">' + info.date + '</td>' +
-					'<td class="cell100 column2">' + info.time + '</td>' +
-					'<td class="cell100 column3">' + info.HR + '</td>' +
-					'<td class="cell100 column4">' + info.BP.values[0]+ "," + info.BP.values[1] + '</td>' +
-					'<td class="cell100 column5">' + info.Pulse + '</td>' +
-					'<td class="cell100 column6">' + info.OSat + '</td>' +
-					'<td class="cell100 column7">' + info.Temp + '</td>' +
-					'<td class="cell100 column8">' + info.Resp + '</td>' +
+					'<td class="cell100 column1">' + data.date + '</td>' +
+					'<td class="cell100 column2">' + data.time + '</td>' +
+					'<td class="cell100 column3">' + data.HR + '</td>' +
+					'<td class="cell100 column4">' + data.BP.values[0]+ "," + data.BP.values[1] + '</td>' +
+					'<td class="cell100 column5">' + data.Pulse + '</td>' +
+					'<td class="cell100 column6">' + data.OSat + '</td>' +
+					'<td class="cell100 column7">' + data.Temp + '</td>' +
+					'<td class="cell100 column8">' + data.Resp + '</td>' +
 					'</tr>');
 			});
 		}, 5000);
