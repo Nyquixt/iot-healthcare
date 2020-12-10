@@ -5,8 +5,9 @@ $(function () {
 	$('#start').click(() => {
 		$('#start').hide();
 		$('#stop').show();
+
 		requestInterval = setInterval(() => {
-			$.get('https://55yc79y6i0.execute-api.us-east-1.amazonaws.com/Test/vitals', data => {
+			$.get('https://px358l2cdd.execute-api.us-east-2.amazonaws.com/Test', data => {
 				console.log(typeof data.body);
 				info = JSON.parse(data.body);
 				console.log(data);
